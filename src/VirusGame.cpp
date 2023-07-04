@@ -19,8 +19,10 @@ extern "C" int main()
     std::cout<<"Use the cursor keys to move around\n";
     srand(time(NULL));        // seed the speudo random number generator 
     MySDL mySDL("VirusGame"); // create an SDL graphics window
-    
-    Player player(mySDL.size()*0.5); // player
+
+    Coord window_size = mySDL.size(); // Store the window size in a variable
+
+    Player player(window_size*0.5); // player
 
     const int max_nr_units=20;    // maximum number of units, feel free to change
     int nr_units=0;               // current number of units
@@ -44,7 +46,7 @@ extern "C" int main()
         
         if (rand_0_1()<new_virus_chance && nr_units<max_nr_units) // by chance create a new virus
         {
-            Coord window_size=mySDL.size();
+            Coord window_size=window_size;
             Coord pos  = Coord(window_size.x       * rand_0_1() ,  window_size.y       * rand_0_1() );
             Coord speed= Coord(new_virus_max_speed * rand_m1_1(),  new_virus_max_speed * rand_m1_1());
             units.push_back(Virus(pos,speed));
