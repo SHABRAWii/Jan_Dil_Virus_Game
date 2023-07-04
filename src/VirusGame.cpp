@@ -4,6 +4,8 @@
 #include "Coord.h"
 #include "Player.h"
 #include "Virus.h"
+#include <vector>
+#include <algorithm>
 
 const int SCREEN_FPS = 60;
 const int SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
@@ -21,7 +23,7 @@ extern "C" int main()
 
     const int max_nr_units=20;    // maximum number of units, feel free to change
     int nr_units=0;               // current number of units
-    Virus units[max_nr_units];    // holds all units in the game
+    std::vector <Virus> units;    // holds all units in the game
     double new_virus_chance=0.01; // the chance that a new virus is created each time step
     double new_virus_max_speed=3; // maximum speed of a new virus
     
@@ -57,14 +59,15 @@ extern "C" int main()
             Coord window_size=mySDL.size();
             Coord pos  = Coord(window_size.x       * rand_0_1() ,  window_size.y       * rand_0_1() );
             Coord speed= Coord(new_virus_max_speed * rand_m1_1(),  new_virus_max_speed * rand_m1_1());
-            units[nr_units]=Virus(pos,speed);
+            units.push_back(Virus(pos,speed));
             nr_units+=1;
         }
-        for (int i=0;i<nr_units;i++) // handle all units
+        
+        std::for_each(units.begin(), units.end(), [&](Virus& unit) 
         {
-            units[i].step(mySDL);
-            units[i].draw(mySDL);
-        }
+            unit.step(mySDL);
+            unit.draw(mySDL);
+        });
         
         SDL_RenderPresent(mySDL.renderer()); // update graphics window
         int frame_ticks=SDL_GetTicks()-ticks_start;
