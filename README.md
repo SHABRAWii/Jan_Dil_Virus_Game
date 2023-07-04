@@ -34,3 +34,8 @@ The time complexity of the game loop largely depends on the number of units (vir
 ## Conclusion
 The VirusGame project involved the development of a game using C++ and SDL. The code was refactored to improve organization, readability, and performance. The game loop was split into separate functions, and STL algorithms and OpenMP parallelization were used to enhance the code. The time complexity of the game loop depends on the number of units, with the refactored versions retaining the same time complexity as the original code.
 
+### Tasks that are done
+[x] Task3:ResourceAcquisitionIsInitialization(RAII)
+[x] Task4:StandardTemplateLibrary(STL)Containers
+[x] Task5:StandardTemplateLibrary(STL)Algorithms
+
