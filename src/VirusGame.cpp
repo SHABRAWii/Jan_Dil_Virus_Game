@@ -4,6 +4,7 @@
 #include "Coord.h"
 #include "Player.h"
 #include "Virus.h"
+#include "HandleEvents.h"
 #include <vector>
 #include <algorithm>
 
@@ -34,20 +35,7 @@ extern "C" int main()
         SDL_SetRenderDrawColor(mySDL.renderer(),0,0,0,255); // black background
         SDL_RenderClear(mySDL.renderer()); // clear graphics window
 
-        SDL_Event e;
-        while( SDL_PollEvent(&e) ) // handle events
-        {
-            int x, y;
-            switch(e.type)
-            {
-            case SDL_QUIT:
-                quit = true; break;
-            case SDL_MOUSEBUTTONDOWN:
-                SDL_GetMouseState( &x, &y );
-                std::cout<<"mouse down: "<<x<<","<<y<<'\n';
-                break;
-            }
-        }
+        EventHandler::handleEvents(mySDL, quit);
         const Uint8* keyboardState=SDL_GetKeyboardState(NULL); // get keyboard state
 
         player.keyboard(keyboardState); // control the player by keyboard
