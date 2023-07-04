@@ -12,6 +12,8 @@ public:
     /*! Creates the Player
       @param pos start position
      */
+    static const int radius=24;
+    bool kill = 0;
     Player(Coord pos) :
         pos{pos}
     {}
@@ -31,6 +33,14 @@ public:
             speed.x-=diff_speed;
         if (keyboardState[SDL_SCANCODE_RIGHT])
             speed.x+=diff_speed;
+        if(keyboardState[SDL_SCANCODE_SPACE]){
+            kill = 1;
+            G = B = 0;
+        }else{
+            kill = 0;
+            G = B = 255;
+        }
+
         // if (keyboardState[SDL_SCANCODE_A])
         speed*=0.95; // reduce speed to create some resistance
     }
@@ -51,10 +61,17 @@ public:
       @param mySDL for the size of the window
      */
     void draw(MySDL& mySDL) const
-    {   aacircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(255,255,255)); }
+    {   aacircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(R,G,B)); }
+
+    /*! Returns the position of the player
+     */
+    Coord getPosition() const
+    {
+        return pos;
+    }
     
 private:
-    static const int radius=24;
+    int R = 255, G = 255, B = 255;
     Coord pos,speed;
 };
 

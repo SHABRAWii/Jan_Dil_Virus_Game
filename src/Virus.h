@@ -37,9 +37,15 @@ public:
      */
     void draw(MySDL& mySDL) const
     {   filledCircleColor(mySDL.renderer(), pos.x, pos.y, radius, color(0,255,0)); }
-    
-private:
+
+    /*! Returns the position of the Virus
+     */
+    Coord getPosition() const
+    {
+        return pos;
+    }
     static const int radius=10;
+private:
     Coord pos,speed;
 };
 
