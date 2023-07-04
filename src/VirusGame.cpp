@@ -7,6 +7,7 @@
 #include "HandleEvents.h"
 #include <vector>
 #include <algorithm>
+#include <omp.h>
 
 const int SCREEN_FPS = 60;
 const int SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
@@ -53,11 +54,14 @@ extern "C" int main()
             nr_units+=1;
         }
         
-        std::for_each(units.begin(), units.end(), [&](Virus& unit) 
-        {
+        // Using OpenMP directives for parallelization.
+        // The complexity remain O(n) which is the same but we made an optimization by allowing more threads to participate in process
+        #pragma omp parallel for
+        for (std::size_t i = 0; i < units.size(); ++i) {
+            Virus& unit = units[i];
             unit.step(mySDL);
             unit.draw(mySDL);
-        });
+        }
         
         SDL_RenderPresent(mySDL.renderer()); // update graphics window
         int frame_ticks=SDL_GetTicks()-ticks_start;
