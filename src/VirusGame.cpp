@@ -53,7 +53,7 @@ extern "C" int main()
             units.push_back(Virus(pos,speed));
             nr_units+=1;
         }
-        
+
         // Using OpenMP directives for parallelization.
         // The complexity remain O(n) which is the same but we made an optimization by allowing more threads to participate in process
         #pragma omp parallel for
@@ -62,6 +62,12 @@ extern "C" int main()
             unit.step(mySDL);
             unit.draw(mySDL);
         }
+        
+        // std::for_each(units.begin(), units.end(), [&](Virus& unit) 
+        // {
+        //     unit.step(mySDL);
+        //     unit.draw(mySDL);
+        // });
         
         SDL_RenderPresent(mySDL.renderer()); // update graphics window
         int frame_ticks=SDL_GetTicks()-ticks_start;
