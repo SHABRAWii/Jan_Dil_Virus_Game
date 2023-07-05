@@ -1,3 +1,0 @@
-/media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build/CMakeFiles/VirusGame.dir
-/media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build/CMakeFiles/edit_cache.dir
-/media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build/CMakeFiles/rebuild_cache.dir
