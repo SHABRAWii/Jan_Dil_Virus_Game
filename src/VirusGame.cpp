@@ -7,6 +7,7 @@
 #include "HandleEvents.h"
 #include <list>
 #include <algorithm>
+#include <math.h>
 
 const int SCREEN_FPS = 60;
 const int SCREEN_TICKS_PER_FRAME = 1000 / SCREEN_FPS;
@@ -37,7 +38,7 @@ extern "C" int main()
         SDL_SetRenderDrawColor(mySDL.renderer(),0,0,0,255); // black background
         SDL_RenderClear(mySDL.renderer()); // clear graphics window
 
-        EventHandler::handleEvents(mySDL, quit);
+        EventHandler::handleEvents(quit);
         const Uint8* keyboardState=SDL_GetKeyboardState(NULL); // get keyboard state
 
         player.keyboard(keyboardState); // control the player by keyboard

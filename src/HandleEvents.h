@@ -13,10 +13,10 @@ public:
     EventHandler() = default;
     ~EventHandler() = default;
 
-    static void handleEvents(MySDL& mySDL, bool& quit);
+    static void handleEvents(bool& quit);
 };
 
-void EventHandler::handleEvents(MySDL& mySDL, bool& quit)
+void EventHandler::handleEvents(bool& quit)
 {
     SDL_Event e;
     while (SDL_PollEvent(&e))

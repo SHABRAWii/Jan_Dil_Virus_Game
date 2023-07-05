@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake
+CMAKE_COMMAND = /home/gumball/.local/lib/pypy3.9/site-packages/cmake/data/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E rm -f
+RM = /home/gumball/.local/lib/pypy3.9/site-packages/cmake/data/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src
+CMAKE_SOURCE_DIR = /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build
+CMAKE_BINARY_DIR = /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/VirusGame.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/VirusGame.dir/progress.make
 include CMakeFiles/VirusGame.dir/flags.make
 
 CMakeFiles/VirusGame.dir/VirusGame.cpp.o: CMakeFiles/VirusGame.dir/flags.make
-CMakeFiles/VirusGame.dir/VirusGame.cpp.o: /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/VirusGame.cpp
+CMakeFiles/VirusGame.dir/VirusGame.cpp.o: /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/VirusGame.cpp
 CMakeFiles/VirusGame.dir/VirusGame.cpp.o: CMakeFiles/VirusGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VirusGame.dir/VirusGame.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VirusGame.dir/VirusGame.cpp.o -MF CMakeFiles/VirusGame.dir/VirusGame.cpp.o.d -o CMakeFiles/VirusGame.dir/VirusGame.cpp.o -c /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/VirusGame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VirusGame.dir/VirusGame.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VirusGame.dir/VirusGame.cpp.o -MF CMakeFiles/VirusGame.dir/VirusGame.cpp.o.d -o CMakeFiles/VirusGame.dir/VirusGame.cpp.o -c /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/VirusGame.cpp
 
 CMakeFiles/VirusGame.dir/VirusGame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusGame.dir/VirusGame.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/VirusGame.cpp > CMakeFiles/VirusGame.dir/VirusGame.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/VirusGame.cpp > CMakeFiles/VirusGame.dir/VirusGame.cpp.i
 
 CMakeFiles/VirusGame.dir/VirusGame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusGame.dir/VirusGame.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/VirusGame.cpp -o CMakeFiles/VirusGame.dir/VirusGame.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/VirusGame.cpp -o CMakeFiles/VirusGame.dir/VirusGame.cpp.s
 
 # Object files for target VirusGame
 VirusGame_OBJECTS = \
@@ -92,11 +92,11 @@ VirusGame_EXTERNAL_OBJECTS =
 
 VirusGame: CMakeFiles/VirusGame.dir/VirusGame.cpp.o
 VirusGame: CMakeFiles/VirusGame.dir/build.make
-VirusGame: /opt/homebrew/lib/libSDL2_gfx.dylib
-VirusGame: /opt/homebrew/lib/libSDL2main.a
-VirusGame: /opt/homebrew/lib/libSDL2.dylib
+VirusGame: /usr/lib/x86_64-linux-gnu/libSDL2_gfx.so
+VirusGame: /usr/lib/x86_64-linux-gnu/libSDL2main.a
+VirusGame: /usr/lib/x86_64-linux-gnu/libSDL2.so
 VirusGame: CMakeFiles/VirusGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable VirusGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable VirusGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VirusGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/VirusGame.dir/clean:
 .PHONY : CMakeFiles/VirusGame.dir/clean
 
 CMakeFiles/VirusGame.dir/depend:
-	cd /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build /Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/build/CMakeFiles/VirusGame.dir/DependInfo.cmake --color=$(COLOR)
+	cd /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build /media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/build/CMakeFiles/VirusGame.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/VirusGame.dir/depend
 

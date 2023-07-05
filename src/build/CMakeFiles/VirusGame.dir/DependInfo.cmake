@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/dilyarmuslembuzan/Downloads/course_c++/Folders/virusgame/src/VirusGame.cpp" "CMakeFiles/VirusGame.dir/VirusGame.cpp.o" "gcc" "CMakeFiles/VirusGame.dir/VirusGame.cpp.o.d"
+  "/media/gumball/Darwin/Robotics/Projects/Folders/Folders/virusgame/Jan_Dil_Virus_Game/src/VirusGame.cpp" "CMakeFiles/VirusGame.dir/VirusGame.cpp.o" "gcc" "CMakeFiles/VirusGame.dir/VirusGame.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

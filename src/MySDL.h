@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL2_gfxPrimitives.h>
 #include "Coord.h"
+#include <iostream>
 
 /*!  Holds information about and hides complexity of the SDL2 graphics
   library so we can easily use it to draw. For available draw
